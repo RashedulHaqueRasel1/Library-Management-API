@@ -15,7 +15,7 @@ const port = 3000;
 async function main() {
     try {
         await mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@cluster0.gwet8mu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);
-        console.log('✅ Library Management Connected to MongoDB Using Mongoose');
+        console.log('✅ Library Management Connected to MongoDB Using Mongoose.');
 
         server = app.listen(port, () => {
             console.log(`✅ Library Management Server is running on http://localhost:${port}`);

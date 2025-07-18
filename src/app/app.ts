@@ -1,18 +1,17 @@
 import express, { Application, NextFunction, Request, Response } from 'express';
 import mongoose from 'mongoose';
-// import { notesRouter } from './controllers/notes.controllers';
-// import { userRouter } from './controllers/users.controllers';
-
+import { bookRouter } from './controllers/book.controllers';
 
 const app: Application = express();
 
-// ✅ Must-have middleware
+
+// middleware 
 app.use(express.json());
 
 
-// ✅ Register the notes router
-// app.use("/notes", notesRouter);
-// app.use("/users", userRouter);
+
+// 
+app.use("/api/books", bookRouter);
 
 
 
