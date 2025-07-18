@@ -3,11 +3,9 @@
 
 This is a RESTful API built using **TypeScript**, **Express.js**, and **MongoDB** to manage a basic library system — including books and borrowing functionality.
 
-## 🔗 Live Repo
-
-GitHub: [https://github.com/RashedulHaqueRasel1/Library-Management-API](Click Here)
-
-Live Link : [https://library-management-green-two.vercel.app](Click Here)
+### Github Repo & Live Link:
+  github: "[Click Here](https://github.com/RashedulHaqueRasel1/Library-Management-API)"
+  live_link: "[Click Here](https://library-management-green-two.vercel.app)"
 ---
 
 ## 🛠️ Technologies Used
