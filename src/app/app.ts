@@ -1,6 +1,7 @@
 import express, { Application, NextFunction, Request, Response } from 'express';
 import mongoose from 'mongoose';
 import { bookRouter } from './controllers/book.controllers';
+import { borrowRouter } from './controllers/borrow.controllers';
 
 const app: Application = express();
 
@@ -10,8 +11,9 @@ app.use(express.json());
 
 
 
-// 
+// routers
 app.use("/api/books", bookRouter);
+app.use("/api/borrow", borrowRouter);
 
 
 
