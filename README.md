@@ -5,9 +5,9 @@ This is a RESTful API built using **TypeScript**, **Express.js**, and **MongoDB*
 
 ## 🔗 Live Repo
 
-GitHub: [https://github.com/RashedulHaqueRasel1/Library-Management-API](https://github.com/RashedulHaqueRasel1/Library-Management-API)
+GitHub: [https://github.com/RashedulHaqueRasel1/Library-Management-API](Click Here)
 
-Live Link : [https://library-management-green-two.vercel.app](https://library-management-green-two.vercel.app)
+Live Link : [https://library-management-green-two.vercel.app](Click Here)
 ---
 
 ## 🛠️ Technologies Used
