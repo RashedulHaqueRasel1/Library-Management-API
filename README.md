@@ -9,27 +9,6 @@ GitHub: [https://github.com/RashedulHaqueRasel1/Library-Management-API](https://
 
 ---
 
-## 📁 Folder Structure
-
-src
-│
-├── app
-│ ├── controllers # Request handlers (Book & Borrow)
-│ │ ├── book.controllers.ts
-│ │ └── borrow.controllers.ts
-│ │
-│ ├── interfaces # TypeScript interfaces for model schemas
-│ │ ├── book.interface.ts
-│ │ └── borrow.interface.ts
-│ │
-│ ├── models # Mongoose models
-│ │ ├── book.models.ts
-│ │ └── borrow.model.ts
-│
-├── app.ts # Express app configuration
-└── server.ts # Entry point of the application
-
-
 ## 🛠️ Technologies Used
 
 - TypeScript
@@ -65,6 +44,7 @@ npm install
 Create a .env file in the root directory and add the following:
 
 PORT=3000
+
 MONGODB_URI=your_mongodb_connection_string
 
 ### 4️⃣ Compile TypeScript
@@ -93,4 +73,5 @@ GET /api/borrow — List borrowed books
 
 ### 👨‍💻 Author
 Rashedul Haque Rasel
+
 Email: rashedulhaquerasel1@gmail.com
