@@ -7,6 +7,7 @@ This is a RESTful API built using **TypeScript**, **Express.js**, and **MongoDB*
 
 GitHub: [https://github.com/RashedulHaqueRasel1/Library-Management-API](https://github.com/RashedulHaqueRasel1/Library-Management-API)
 
+Live Link : [https://library-management-green-two.vercel.app](https://library-management-green-two.vercel.app)
 ---
 
 ## 🛠️ Technologies Used
@@ -34,6 +35,7 @@ GitHub: [https://github.com/RashedulHaqueRasel1/Library-Management-API](https://
 
 
 git clone https://github.com/RashedulHaqueRasel1/Library-Management-API.git
+
 cd Library-Management-API
 
 ### 2️⃣ Install Dependencies
@@ -43,9 +45,11 @@ npm install
 
 Create a .env file in the root directory and add the following:
 
-PORT=3000
+DB_USER=
 
-MONGODB_URI=your_mongodb_connection_string
+DB_PASS=
+
+PORT=3000
 
 ### 4️⃣ Compile TypeScript
 npx tsc
@@ -59,11 +63,11 @@ GET /api/books — Get all books
 
 POST /api/books — Add a new book
 
-GET /api/books/:id — Get a single book
+GET /api/books/:bookId — Get a single book
 
-PATCH /api/books/:id — Update book details
+PATCH /api/books/:bookId — Update book details
 
-DELETE /api/books/:id — Delete a book
+DELETE /api/books/:bookId — Delete a book
 
 # Borrow
 POST /api/borrow — Borrow a book

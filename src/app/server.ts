@@ -5,16 +5,12 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config(); 
 
-// Load environment variables from .env file
-const dbUser = process.env.DB_USER;
-const dbPass = process.env.DB_PASS;
- 
 let server: Server;
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 async function main() {
     try {
-        await mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@cluster0.gwet8mu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);
+        await mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.gwet8mu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);
         console.log('✅ Library Management Connected to MongoDB Using Mongoose.');
 
         server = app.listen(port, () => {
