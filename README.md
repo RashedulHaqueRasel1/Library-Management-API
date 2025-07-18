@@ -30,9 +30,6 @@ src
 └── server.ts # Entry point of the application
 
 
-
----
-
 ## 🛠️ Technologies Used
 
 - TypeScript
@@ -56,7 +53,7 @@ src
 
 ### 1️⃣ Clone the Repository
 
-```bash
+
 git clone https://github.com/RashedulHaqueRasel1/Library-Management-API.git
 cd Library-Management-API
 
@@ -77,12 +74,21 @@ npx tsc
 node dist/server.js
 
 ### 📬 API Endpoints
-Method	Endpoint	Description
-GET	    /api/books	  Get all books
-POST	/api/books	 Add a new book
-DELETE	/api/books/:id	Delete a book
-POST	/api/borrow	 Borrow a book
-GET	   /api/borrow	 Return a summary of borrowed books,
+# Books
+GET /api/books — Get all books
+
+POST /api/books — Add a new book
+
+GET /api/books/:id — Get a single book
+
+PATCH /api/books/:id — Update book details
+
+DELETE /api/books/:id — Delete a book
+
+# Borrow
+POST /api/borrow — Borrow a book
+
+GET /api/borrow — List borrowed books
 
 
 ### 👨‍💻 Author
