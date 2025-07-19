@@ -18,7 +18,6 @@ app.use("/api/borrow", borrowRouter);
 
 
 
-
 // well come route
 app.get('/', (req: Request, res: Response, next: NextFunction) => {
     res.send({ message: 'Hello, Well Come to the Library Management API System!' });
@@ -32,10 +31,34 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     });
 });
 
+
 // Error handling middleware
-app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
-    console.error('❌ Error:', error.message);
-    res.status(500).send({ message: 'Internal Server Error', error: error.message });
+app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+    console.error(err);
+
+    // Mongoose Validation Error
+    if (err.name === 'ValidationError') {
+        const errors: any = {};
+        Object.keys(err.errors).forEach((key) => {
+            errors[key] = err.errors[key].message;
+        });
+
+        return res.status(400).json({
+            message: 'Validation failed',
+            success: false,
+            error: {
+                name: err.name,
+                errors: err.errors,
+            },
+        });
+    }
+
+    // Default error
+    res.status(err.status || 500).json({
+        message: err.message || 'Something went wrong',
+        success: false,
+        error: err,
+    });
 });
 
 export default app;
