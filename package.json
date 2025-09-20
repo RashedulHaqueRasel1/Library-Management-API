@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/app/server.ts",
+    "start": "node init && node index.js",
+    "dev": "node init && ts-node-dev --respawn --transpile-only src/app/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,6 +16,7 @@
     "mongodb": "^6.17.0",
     "mongoose": "^8.16.4",
     "node": "^20.19.4",
+    "node-fetch": "^3.3.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
   },
